@@ -1,6 +1,7 @@
+import random
+
 import streamlit as st
 import streamlit.components.v1 as components
-import random
 from streamlit import session_state
 from 主頁 import original_content
 
@@ -28,6 +29,34 @@ st.title("🦊 Test Zone 測驗區")
 st.text("今天想要練習什麼類型的題目呢？點擊馬上開始吧(ﾉ>ω<)ﾉ")
 st.divider()
 
+
+show_add_question = st.button(" ▶ 點擊收放教師設定區 ")
+if "show_add_question" not in st.session_state:
+    st.session_state.show_add_question = False
+if show_add_question:
+    st.session_state.show_add_question = not st.session_state.show_add_question
+    st.session_state.something = ''
+
+if st.session_state.show_add_question:
+    st.subheader("教師設定區")
+
+    st.markdown("老師好！此處可以新增您想讓學生練習的題目")
+
+    st.selectbox(
+        '##### 題目類別',
+        (
+            '短句練習',
+            '長篇練習',
+            '新增類別',
+        ),
+    )
+
+    st.text_input("##### 題目敘述", '')
+    st.button('送出')
+
+    st.divider()
+
+
 # Test Content
 content_general = [
     "你認為家裡生活環境的維持應該是誰的責任？請寫一篇短文說明你的看法。文分兩段，第一段説明你對家事該如何分工的看法及理由，第二段舉例説明你家中家事分工的情形，並描迹你自己做家事的經驗及感想。",
@@ -37,7 +66,6 @@ content_general = [
     "請撰寫一篇以「台灣的文化與自然之美」為主題的英文作文，字數約200字。你可以描述台灣多元的文化特色以及令人驚嘆的自然景觀，並提出促進台灣形象宣傳的建議。",
     "請針對「選擇智能眼鏡的理由與對隱形斗篷的反對看法」為題，寫一篇字數約250字的英文作文。文章應詳細闡述你選擇智能眼鏡的原因以及對隱形斗篷的反對理由。同時，探討科技的雙面性以及在應用科技時應該謹慎思考的觀點。",
 ]
-
 selected_general = random.choice(content_general)
 
 content_essay = [
@@ -45,13 +73,11 @@ content_essay = [
     "隨著社群媒體的普及，表情符號（emoji）的使用也極為普遍。請參考下列表情符號，寫一篇英文作文，文分兩段。第一段說明人們何以喜歡使用表情符號，並從下列的表情符號中舉一至二例，說明表情符號在溝通上有何功能。第二段則以個人或親友的經驗為例，討論表情符號在訊息表達或解讀上可能造成的誤會或困擾，並提出可以化解的方法。",
     "不同的公園，可能樣貌不同，特色也不同。請以此為主題，並依據下列兩張圖片的內容，寫一篇英文作文，文分兩段。第一段描述圖 A 和圖 B 中的公園各有何特色，第二段則說明你心目中理想公園的樣貌與特色，並解釋你的理由。",
 ]
-
 image_e_urls = [
     "image/e01.png",
     "image/e02.png",
     "image/e03.png",
 ]
-
 selected_essay = random.choice(content_essay)
 selected_image_e_url = image_e_urls[content_essay.index(selected_essay)]
 
@@ -66,7 +92,6 @@ content_translation = [
     "根據新聞報導，每年全球有超過百萬人在道路事故中喪失性命。",
     "因此，交通法規必須嚴格執行，以確保所有用路人的安全。",
 ]
-
 selected_translation = random.choice(content_translation)
 
 content_academic = [
@@ -83,6 +108,16 @@ image_a_urls = [
 
 selected_academic = random.choice(content_academic)
 selected_image_a_url = image_a_urls[content_academic.index(selected_academic)]
+
+short_essay = [
+    "指定科目考試完畢後，高中同學決定召開畢業後的第一次同學會，你被公推負責主辦。請將你打算籌辦的活動寫成一篇短文。文分兩段，第一段詳細介紹同學會的時間、地點及活動內容，第二段則說明採取這種活動方式的理由。"
+]
+selected_short = random.choice(short_essay)
+
+long_essay = [
+    "小考、段考、複習考、畢業考、甚至校外其它各種大大小小的考試，已成為高中學生生活中不可或缺的一部份。請寫一篇120至150個單詞左右的英文作文。文分兩段，第一段以Exams of all kinds have become a necessary part of my high school life.為主題句；第二段則以The most unforgettable exam I have ever taken is…為開頭並加以發展。",
+]
+selected_long = random.choice(long_essay)
 
 
 # Button Function
@@ -112,6 +147,22 @@ def test_general():
     selected_image_url = " "
     session_state.show_topic = {
         "content": selected_general,
+        "image_url": selected_image_url,
+    }
+
+
+def test_short():
+    selected_image_url = " "
+    session_state.show_topic = {
+        "content": selected_short,
+        "image_url": selected_image_url,
+    }
+
+
+def test_long():
+    selected_image_url = " "
+    session_state.show_topic = {
+        "content": selected_long,
         "image_url": selected_image_url,
     }
 
@@ -150,11 +201,19 @@ with col1:
         test_translation()
     if st.button("Essay 作文", key="essay_btn"):
         test_essay()
+
     st.subheader("英文檢定考")
     if st.button("Academic Writing 學術寫作", key="academic_writing_btn"):
         test_academic()
     if st.button("General Writing 一般寫作", key="general_writing_btn"):
         test_general()
+
+    st.subheader("教師自訂區")
+    if st.button("短句練習（50字以內）", key="short_writing_btn"):
+        test_short()
+    if st.button("長篇練習", key="long_writing_btn"):
+        test_long()
+
 # left page：button
 with col2:
     temp()

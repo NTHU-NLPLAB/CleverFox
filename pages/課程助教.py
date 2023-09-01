@@ -73,8 +73,9 @@ st.title("🦊 嗨！我是你的AI教學助教💡")
 
 input_key = st.text_input("輸入您的OpenAI API key", '')
 openai.api_key = input_key
+st.divider()
 
-show_teacher = st.button(" ▶ 點擊收縮教師設定區 ")
+show_teacher = st.button(" ▶ 點擊收放教師設定區 ")
 
 if "show_teacher" not in st.session_state:
     st.session_state.show_teacher = False
