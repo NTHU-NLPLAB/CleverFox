@@ -6,7 +6,25 @@ import streamlit as st
 # from st_pages import Page, show_pages, add_page_title
 from streamlit import session_state
 
+# Set the page title
 st.set_page_config(page_title='CleverFox', page_icon='🦊', layout='wide')
+# 設定網頁的字體
+st.markdown(
+    """
+      <style>
+        html, body, [class*="css"]  {
+        font-family: Courier New, "微軟正黑體";
+        }
+        [class="mord"], [class="vlist-r"] {
+        font-family: Courier New, "微軟正黑體", Microsoft JhengHei;
+        font-size: 16px;
+        }
+      </style>
+
+      """,
+    unsafe_allow_html=True,
+)
+
 
 original_content = ""
 
@@ -96,21 +114,3 @@ else:
 
         if revise_topic == '文字等級提升':
             wordchoice.choice(text)
-
-
-# 設定網頁的字體
-st.markdown(
-    """
-      <style>
-        html, body, [class*="css"]  {
-        font-family: Courier New, "微軟正黑體";
-        }
-        [class="mord"], [class="vlist-r"] {
-        font-family: Courier New, "微軟正黑體", Microsoft JhengHei;
-        font-size: 16px;
-        }
-      </style>
-
-      """,
-    unsafe_allow_html=True,
-)
