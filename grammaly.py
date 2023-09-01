@@ -9,9 +9,20 @@ def chat(prompt, text, tmpr, num_token):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         messages=[
+            {"role": "user", "content": "Act as if you are a seasoned English teacher."},
+            {"role": "system", "content": "OK. I am a seasoned English teacher."},
             {"role": "user", "content": rf"{prompt}"},
-            {"role": "system", "content": f"She was involved in {{+a+}} big accident."},
-            {"role": "user", "content": rf"{text}"},
+            {
+                "role": "assistant",
+                "content": "OK. I will strictly follow the specified format above.",
+            },
+            {"role": "user",
+                "content": r"Do the task with given Text = \"She was involved in big accident.\""},
+            {"role": "system", "content": "She was involved in {+a+} big accident."},
+            {
+                "role": "user",
+                "content": rf"Now, do the task with given \"{text}\", and generate modified text in the specified format. Note that special attention should be paid to \"idiomatic collocations\" when doing the task, which means using the phrases more common and widely used, if the word doesn't need to be replaced, don't force substitutions. The output contains ONLY modified text.",
+            },
         ],
         temperature=float(tmpr),
         max_tokens=int(num_token),
@@ -23,13 +34,12 @@ def grammar(text):
     '''
     call ChatGPT to correct the text(article)
     '''
-    temp_prompt = """Act as if you are a seasoned English teacher to help improve my text by making the sentence more grammatical and logical in Standard English use. \
-                    Mark each identified grammar error to be removed or replaced with square brackets (i.e., "[-", "-]"), and then insert the suggested word to replace the grammar error or to add in with curly brackets  (i.e., "{+", "+}")  right before each error.
-
-                Text: I'm writing to You in order to express my feelings.
-                Corrected Text: I'm writing to {+you+} [-You-] in order to express my feelings.
-                Text: She was involved in big accident.
-                Corrected Text:
+    temp_prompt = """Help improve my text by making EVERY sentence more grammatical and logical in Standard English use. \
+                    Precisly mark EACH word to be replaced with square brackets (i.e., \"[-\", \"-]\"), \
+                    and insert the suggested word to replace with curly brackets (i.e., \"{{+\", \"+}}\") right before EACH word to be replaced.\
+                    If gramma is correct, don't replace it.\
+                    Text = I'm writing to You in order to express my feelings.
+                    Corrected Text =  I'm writing to {+you+} [-You-] in order to express my feelings.
     """
     # temp_tmpr = 0.3
     # temp_max = 500
