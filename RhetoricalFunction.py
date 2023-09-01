@@ -4,12 +4,12 @@ from CountTokens import num_tokens_from_messages, count_tokens
 from doubleSpace import diff_tokens, get_a_line, replaceBlank
 
 functions_file_path = "./rhetorical_functions.txt"
-with open(functions_file_path , 'r') as functions_file:
+with open(functions_file_path, 'r') as functions_file:
     rhetorical_functions = functions_file.read()
 
-def process_article(article_content):
 
-    CONTENT_1 = f"""I want you to act as if you are a linguist who are familiar with functional language which is meta discourse and not the content itself. Phrases in functional language typically appear at the beginning of a sentence, are high in frequency with common and general words. 
+def process_article(article_content):
+    CONTENT_1 = f"""I want you to act as if you are a linguist who are familiar with functional language which is meta discourse and not the content itself. Phrases in functional language typically appear at the beginning of a sentence, are high in frequency with common and general words.
 
 Here are 12 types of rhetorical functions and their examples.
 
@@ -38,17 +38,17 @@ Output: After the election, we asked whether the parties should change their lea
     CONTENT_3 = "I believe that we can observe two things: first, what an animal does, and second, its previous environmental history"
 
     RESPONSE_3 = "{+E. Expressing Personal Opinions+} [-I believe that-] we can observe two things: {+I. Listing Items+} [-first,-] what an animal does, and {+I. Listing Items+} [-second,-] its previous environmental history"
-    
+
     CONTENT_4 = "As Davidson (1981) maintains, interpreters should be highly educated and fluent, because of the highly complex activity."
-    
+
     RESPONSE_4 = "{+K. Citing Others+} [-As Davidson (1981) maintains,-] interpreters should be highly educated and fluent, {+D. Expressing Cause/Effect+} [-because of-] the highly complex activity."
-	
+
     CONTENT_5 = f"""{article_content}"""
-    
-    model="gpt-4"
-    #model="gpt-3.5-turbo"
-    
-    messages_1= [
+
+    model = "gpt-4"
+    # model="gpt-3.5-turbo"
+
+    messages_1 = [
         {'role': 'user', 'content': CONTENT_1},
         {'role': 'assistant', 'content': RESPONSE_1},
         {'role': 'user', 'content': CONTENT_2},
@@ -57,29 +57,30 @@ Output: After the election, we asked whether the parties should change their lea
         {'role': 'assistant', 'content': RESPONSE_3},
         {'role': 'user', 'content': CONTENT_4},
         {'role': 'assistant', 'content': RESPONSE_4},
-        {'role': 'user', 'content': CONTENT_5}
+        {'role': 'user', 'content': CONTENT_5},
     ]
-    
+
     submit_prompt = st.button('送出')
+    st.subheader('**批改結果**')
     if submit_prompt:
-	# Get ChatGPT answer
+        # Get ChatGPT answer
         response_1 = openai.ChatCompletion.create(
             model=model,
             messages=messages_1,
             temperature=0.7,
-            #max_tokens=1000
+            # max_tokens=1000
         )
-        fixed_sentence = response_1['choices'][0]['message']['content']	
-    	
+        fixed_sentence = response_1['choices'][0]['message']['content']
+
         count_tokens(messages_1, response_1, model)
-    	
+
         # Display double space format
         with st.container():
             sent_tokens = diff_tokens(fixed_sentence)
             while sent_tokens != [0]:
                 lines, sent_tokens = get_a_line(sent_tokens)
-                #print(lines[0])
-                #print(lines[1])
+                # print(lines[0])
+                # print(lines[1])
                 line1 = replaceBlank(lines[0])
                 line2 = replaceBlank(lines[1])
                 st.write(line1)
@@ -92,12 +93,12 @@ Output: After the election, we asked whether the parties should change their lea
         # All content of reponse
         with st.expander('Whole Response'):
             st.write(response_1)
-   	
-def getTable(fixed_sentence):
 
+
+def getTable(fixed_sentence):
     CONTENT_6 = """Convert the article with square brackets and curly brackets into a table which containing the sentence number, sentence, phrase, and rhetorical Function, sentence by sentence.
 Notice:
-    1. The table should have 4 columns: Sentence Number, Sentence, Phrase, Rhetorical Function. 
+    1. The table should have 4 columns: Sentence Number, Sentence, Phrase, Rhetorical Function.
     2. The rhetorical Function content should be written as "<Alphabet>. <Big Title of Function>".
     3. Each sentence must have its own row.
     4. If a sentence have no phrase using rhetorical function, leave the Phrase and Rhetorical Function blank.
@@ -106,7 +107,7 @@ Notice:
 
 For example:
 Input: The most obvious implication of the single market is {+E. Expressing Personal Opinions+} [-, in my view,-] the abolition of trade and customs barriers.
-Output: 
+Output:
 Sentence Number | Sentence | Phrase | Rhetorical Function
 --- | --- | --- | ---
 1 | The most obvious implication of the single market is, in my view, the abolition of trade and customs barriers. | , in my view, | E. Expressing Personal Opinions
@@ -138,17 +139,17 @@ Sentence Number | Sentence | Phrase | Rhetorical Function
 """
 
     CONTENT_10 = "{+E. Expressing Personal Opinions+} [-I certainly agree that-] travelling in a group with a tour guide is the best option. Travelling outside of the place where you live is one of the most exiting things."
-    
+
     RESPONSE_10 = """Sentence Number | Sentence | Phrase | Rhetorical Function
 --- | --- | --- | ---
 1 | I certainly agree that travelling in a group with a tour guide is the best option. | I certainly agree that | E. Expressing Personal Opinions
 2 | Travelling outside of the place where you live is one of the most exiting things. | |
 """
 
-    model="gpt-4"
-    #model="gpt-3.5-turbo"
+    model = "gpt-4"
+    # model="gpt-3.5-turbo"
 
-    messages_2= [
+    messages_2 = [
         {'role': 'user', 'content': CONTENT_6},
         {'role': 'assistant', 'content': RESPONSE_6},
         {'role': 'user', 'content': CONTENT_7},
@@ -159,18 +160,17 @@ Sentence Number | Sentence | Phrase | Rhetorical Function
         {'role': 'assistant', 'content': RESPONSE_9},
         {'role': 'user', 'content': CONTENT_10},
         {'role': 'assistant', 'content': RESPONSE_10},
-        {'role': 'user', 'content': fixed_sentence}
+        {'role': 'user', 'content': fixed_sentence},
     ]
 
     response_2 = openai.ChatCompletion.create(
         model=model,
         messages=messages_2,
         temperature=0.7,
-        #max_tokens=1000
+        # max_tokens=1000
     )
     response_table = response_2['choices'][0]['message']['content']
 
     count_tokens(messages_2, response_2, model)
 
     st.write('以下為表格： \n', response_table)
-    
