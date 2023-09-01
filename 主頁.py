@@ -2,6 +2,7 @@ import grammaly
 import wordchoice
 import openai
 import streamlit as st
+import RhetoricalFunction
 
 # from st_pages import Page, show_pages, add_page_title
 from streamlit import session_state
@@ -67,6 +68,7 @@ def refresh_mainpage():
 st.title("🦊 I'd Rather Be a CleverFox")
 input_key = st.text_input("輸入您的OpenAI API key", '')
 openai.api_key = input_key
+st.divider()
 
 col1, col2 = st.columns([4, 1])  # cut into two sections
 # left page：article
@@ -84,7 +86,7 @@ with col1:
 
     # input raw article
     # Synchronize testZone content
-    with st.expander("原始文章", expanded=True):
+    with st.expander("### 原始文章", expanded=True):
         if session_state and (session_state.show_topic["content"] != original_content):
             st.write(session_state.show_topic["content"])
             if session_state.show_topic["image_url"] != " ":
@@ -95,7 +97,9 @@ with col1:
                 )
         else:
             st.write(original_content)
+        uploaded_file = st.file_uploader('上傳你的文章（限PDF檔案）', type="pdf")
         text = st.text_area("", temp_text)
+
 
 with col2:
     st.subheader("批改選項")
@@ -114,3 +118,6 @@ else:
 
         if revise_topic == '文字等級提升':
             wordchoice.choice(text)
+
+        if revise_topic == '轉折詞分析':
+            RhetoricalFunction.process_article(text)

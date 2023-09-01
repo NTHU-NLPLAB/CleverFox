@@ -2,7 +2,6 @@ import openai
 import streamlit as st
 from doubleSpace import diff_tokens, get_a_line, replaceBlank
 
-# openai.api_key = "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"
 CEFR = "A1 - Beginner, A2 - Elementary, B1 - Intermediate, B2 - Upper Intermediate, C1 - Advanced, C2 - Proficient"
 
 
@@ -99,6 +98,8 @@ def choice(text):
 # explain
 def getExplain(fixed_sentence):
     # fixed_sentence = st.text_area('Fixed Sentence', f'{fixed_sentence}')
+
+    # Explain the modified part of following setnece in a markdown table
     QUES1 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : Last summer, I went on a trip to a {+stunning+} [-beautiful-] beach. The weather was {+bright+} [-sunny-] and {+pleasantly+} [-warm-]."
     ANS1 = "| 原字詞 | 替代字詞 | 詞組(span of words) | 解釋 |\n|---|---|---|---|\n|  beautiful  |  stunning  | a stunning beach  | \"Stunning\"（令人驚嘆的）傳達了比\"beautiful\"（美麗的）更強烈的敬畏和欽佩的感覺。 |\n| sunny | bright | The weather was bright | \"Bright\" （明亮的）是對天氣狀況更具體生動的描述。 |\n| warm | pleasantly | The weather was bright and pleasantly | \"Pleasantly\"（愉快地）為溫度添加了積極和愉悅的涵義。 |"
     QUES2 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : I {+constructed+} [-built-] sandcastles with my family and {+gathered+} [-collected-] seashells."
@@ -119,11 +120,9 @@ def getExplain(fixed_sentence):
         max_tokens=1500,
     )
     response_text = response["choices"][0]['message']['content']
-    st.write('以下為解釋表格： \n', response_text)
+    st.subheader('以下為解釋表格： \n')
+    st.write(response_text)
 
     # with st.expander('Whole Response'):
     #     st.write(response)
     return response_text
-
-
-# Explain the modified part of following setnece in a markdown table

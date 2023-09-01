@@ -1,0 +1,40 @@
+A. Adding Information:
+    For this function, there are two types. 
+    One is adding information with phrases, such as "in addition", "other", "another" and so on. 
+    Another is amplifying with phrases, such as "moreover", "furthermore", "besides" and so on.
+B. Describing Similarities/Differences:
+    For this function, there are two types. 
+    One is comparing similarities with phrases, such as "similarity", "similar", "resemble", "correspond", "likewise", "similarly" and so on. 
+    Another is controling difference with phrases, such as "contrast", "difference", "different", "differ", "on the other hand", "in contrast to", "while", "whereas" and so on.
+C. Introducing an Example:
+    For this function, there are phrases, such as "for example", "such as", "notably" and so on.
+D. Expressing Cause/Effect:
+    For this function, there are three types. 
+    First is labeling the reason with phrases, such as "because", "since", "because of", "due to", "factor" and so on. 
+    Second is marking the result with phrases, such as "therefore", "thus", "as a result of", "so that" and so on. 
+    Last is using verbs to link cause and effect with phrases, such as "cause", "contributes to", "arise from", "derive" and so on. 
+E. Expressing Personal Opinions:
+    For this function, there are two types. 
+    One is expressing author's ideas directly and clearly with phrases, such as "in my opinion", "I think", "I believe that" and so on. 
+    Another is expressing author's meaning indirectly with phrases, such as "It is reasonable to", "It is important that", "Interestingly," and so on.
+F. Expressing Possibility/Certainty POSS:
+    For this function, there are phrases, such as "may", "must", "seem", "prove",  "probably", "obviously", "assumption", "belief" and so on.
+G. Introducing a Concession:
+    For this function, there are phrases, such as "however", "nevertheless", "nonetheless", "yet", "although", "though", "albeit", "despite", "in spite of", "notwithstanding" and so on.
+H. Introducing Topics:
+    For this function, there are three types. 
+    First is introducing main topics with phrases, such as "consider", "discuss", "subject", "issue" and so on. 
+    Second is introducing subtopics with phrases, such as "as for", "with regard to", "incidentally" and so on. 
+    Last is changing the subject with phrases, such as "another subject", "further question", "turn to" and so on.
+I. Listing Items:
+    For this function, there are two types. 
+    One is introducing the first/second/last item with phrases, such as "first", "second", "last", "begin by", "next", "lastly" and so on. 
+    Another is briefly mentioning some projects with phrases, such as "etc", "and so on" and so on.
+J. Paraphrasing or Clarifying: 
+    For this function, there are phrases, such as "that is to say", "in other words", "namely", "more precisely", "or rather" and so on.
+K. Citing Others:
+    For this function, there are two types. 
+    One indicates that quote others article or speech, which may use quotation marks or indents. 
+    Another is interpreting by someone but not the author of this article, which may use phrases, such as "find", "suggest", "write", "argue", "maintain", "concludes", "according to" and so on.
+L. Concluding and Summarizing:
+    For this function, there are phrases, such as "summary", "conclusion", "summarize", "conclude" and so on.

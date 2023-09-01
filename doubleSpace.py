@@ -129,9 +129,10 @@ def get_a_line(tokens, limit=60):
 
         # 標點符號
         else:
+            tmp = line1
             line1 = line1.rstrip()
             line1 += token + (' ')
-            line2 += ' ' * (len(token) + 1)
+            line2 += ' ' * (len(token) - (len(tmp) - len(line1) + 1))
             acc_length += len(token) + 1
         print('line1:', len(line1), 'line2:', len(line2))
         print(line1)
