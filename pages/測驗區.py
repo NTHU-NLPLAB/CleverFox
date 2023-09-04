@@ -51,7 +51,8 @@ if st.session_state.show_add_question:
         ),
     )
 
-    st.text_input("##### 題目敘述", '')
+    st.write("##### 主題敘述")
+    st.text_input("簡述您想讓ChatGPT出的題目內容，包含主題的關鍵字、文章長度等", '')
     st.button('送出')
 
     st.divider()
