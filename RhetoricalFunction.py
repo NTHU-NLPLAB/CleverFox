@@ -173,5 +173,5 @@ Sentence Number | Sentence | Phrase | Rhetorical Function
 
     count_tokens(messages_2, response_2, model)
 
-    st.subheader('以下為表格：')
+    st.subheader('以下為解釋表格')
     st.write(response_table)
