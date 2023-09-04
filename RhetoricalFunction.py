@@ -1,6 +1,6 @@
 import openai
 import streamlit as st
-from CountTokens import num_tokens_from_messages, count_tokens
+from CountTokens import count_tokens, num_tokens_from_messages
 from doubleSpace import diff_tokens, get_a_line, replaceBlank
 
 functions_file_path = "./rhetorical_functions.txt"
@@ -88,11 +88,11 @@ Output: After the election, we asked whether the parties should change their lea
 
         getTable(fixed_sentence)
         # Original fixed sentence
-        with st.expander('Original Fixed Sentence'):
-            st.write(fixed_sentence)
+        # with st.expander('Original Fixed Sentence'):
+        # st.write(fixed_sentence)
         # All content of reponse
-        with st.expander('Whole Response'):
-            st.write(response_1)
+        # with st.expander('Whole Response'):
+        # st.write(response_1)
 
 
 def getTable(fixed_sentence):
@@ -173,4 +173,5 @@ Sentence Number | Sentence | Phrase | Rhetorical Function
 
     count_tokens(messages_2, response_2, model)
 
-    st.write('以下為表格： \n', response_table)
+    st.subheader('以下為表格：')
+    st.write(response_table)
