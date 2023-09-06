@@ -1,40 +1,40 @@
-A. Adding Information:
-    For this function, there are two types. 
-    One is adding information with phrases, such as "in addition", "other", "another" and so on. 
-    Another is amplifying with phrases, such as "moreover", "furthermore", "besides" and so on.
-B. Describing Similarities/Differences:
-    For this function, there are two types. 
-    One is comparing similarities with phrases, such as "similarity", "similar", "resemble", "correspond", "likewise", "similarly" and so on. 
-    Another is controling difference with phrases, such as "contrast", "difference", "different", "differ", "on the other hand", "in contrast to", "while", "whereas" and so on.
-C. Introducing an Example:
-    For this function, there are phrases, such as "for example", "such as", "notably" and so on.
-D. Expressing Cause/Effect:
-    For this function, there are three types. 
-    First is labeling the reason with phrases, such as "because", "since", "because of", "due to", "factor" and so on. 
-    Second is marking the result with phrases, such as "therefore", "thus", "as a result of", "so that" and so on. 
-    Last is using verbs to link cause and effect with phrases, such as "cause", "contributes to", "arise from", "derive" and so on. 
-E. Expressing Personal Opinions:
-    For this function, there are two types. 
-    One is expressing author's ideas directly and clearly with phrases, such as "in my opinion", "I think", "I believe that" and so on. 
-    Another is expressing author's meaning indirectly with phrases, such as "It is reasonable to", "It is important that", "Interestingly," and so on.
-F. Expressing Possibility/Certainty POSS:
-    For this function, there are phrases, such as "may", "must", "seem", "prove",  "probably", "obviously", "assumption", "belief" and so on.
-G. Introducing a Concession:
-    For this function, there are phrases, such as "however", "nevertheless", "nonetheless", "yet", "although", "though", "albeit", "despite", "in spite of", "notwithstanding" and so on.
-H. Introducing Topics:
-    For this function, there are three types. 
-    First is introducing main topics with phrases, such as "consider", "discuss", "subject", "issue" and so on. 
-    Second is introducing subtopics with phrases, such as "as for", "with regard to", "incidentally" and so on. 
-    Last is changing the subject with phrases, such as "another subject", "further question", "turn to" and so on.
-I. Listing Items:
-    For this function, there are two types. 
-    One is introducing the first/second/last item with phrases, such as "first", "second", "last", "begin by", "next", "lastly" and so on. 
-    Another is briefly mentioning some projects with phrases, such as "etc", "and so on" and so on.
-J. Paraphrasing or Clarifying: 
-    For this function, there are phrases, such as "that is to say", "in other words", "namely", "more precisely", "or rather" and so on.
-K. Citing Others:
-    For this function, there are two types. 
-    One indicates that quote others article or speech, which may use quotation marks or indents. 
-    Another is interpreting by someone but not the author of this article, which may use phrases, such as "find", "suggest", "write", "argue", "maintain", "concludes", "according to" and so on.
-L. Concluding and Summarizing:
-    For this function, there are phrases, such as "summary", "conclusion", "summarize", "conclude" and so on.
+A. Adding Information 增加資訊:
+    For this function, there are two types. 這類功能有兩種類型。
+    One is adding information with phrases, such as "in addition", "other", "another" and so on. 一種是用來增加資訊．如"in addition", "other", "another"。
+    Another is amplifying with phrases, such as "moreover", "furthermore", "besides" and so on. 另一種是用來加強說明．如"moreover", "furthermore", "besides"。
+B. Describing Similarities/Differences 描述相似／相異之處:
+    For this function, there are two types. 這類功能有兩種類型。
+    One is comparing similarities with phrases, such as "similarity", "similar", "resemble", "correspond", "likewise", "similarly" and so on. 一種是用來比較相似之處，如"similarity", "similar", "resemble", "correspond", "likewise", "similarly"。
+    Another is controlling difference with phrases, such as "contrast", "difference", "different", "differ", "on the other hand", "in contrast to", "while", "whereas" and so on. 另一種是用來引出差異之處，如"contrast", "difference", "different", "differ", "on the other hand", "in contrast to", "while", "whereas"。
+C. Introducing an Example 提供例子:
+    For this function, there are phrases, such as "for example", "such as", "notably" and so on. 此類例如"for example", "such as", "notably"。
+D. Expressing Cause/Effect 表達因果關係:
+    For this function, there are three types. 這類功能有三種類型。
+    First is labeling the reason with phrases, such as "because", "since", "because of", "due to", "factor" and so on. 第一種是用來標明原因，如"because", "since", "because of", "due to", "factor"。
+    Second is marking the result with phrases, such as "therefore", "thus", "as a result of", "so that" and so on. 第二種是用來表示結果，如"therefore", "thus", "as a result of", "so that"。
+    Last is using verbs to link cause and effect with phrases, such as "cause", "contributes to", "arise from", "derive" and so on. 最後是使用動詞來連接因果關係，如"cause", "contributes to", "arise from", "derive"。
+E. Expressing Personal Opinions 表達個人觀點:
+    For this function, there are two types. 這類功能有兩種類型。
+    One is expressing author's ideas directly and clearly with phrases, such as "in my opinion", "I think", "I believe that" and so on. 一種是直接明確表達作者的觀點，如"in my opinion", "I think", "I believe that"。
+    Another is expressing author's meaning indirectly with phrases, such as "It is reasonable to", "It is important that", "Interestingly," and so on. 另一種是間接表達作者的意思，如"It is reasonable to", "It is important that", "Interestingly,"。
+F. Expressing Possibility/Certainty POSS 表達可能性/確定性:
+    For this function, there are phrases, such as "may", "must", "seem", "prove",  "probably", "obviously", "assumption", "belief" and so on. 此類例如"may", "must", "seem", "prove",  "probably", "obviously", "assumption", "belief"。
+G. Introducing a Concession 引入讓步:
+    For this function, there are phrases, such as "however", "nevertheless", "nonetheless", "yet", "although", "though", "albeit", "despite", "in spite of", "notwithstanding" and so on. 此類例如"however", "nevertheless", "nonetheless", "yet", "although", "though", "albeit", "despite", "in spite of", "notwithstanding"。
+H. Introducing Topics 引入主題:
+    For this function, there are three types. 這類功能有三種類型。
+    First is introducing main topics with phrases, such as "consider", "discuss", "subject", "issue" and so on. 第一種是用來引入主題，如"consider", "discuss", "subject", "issue"。
+    Second is introducing subtopics with phrases, such as "as for", "with regard to", "incidentally" and so on. 第二種是用來引入子主題，如"as for", "with regard to", "incidentally"。
+    Last is changing the subject with phrases, such as "another subject", "further question", "turn to" and so on. 最後是用來改變話題，如"another subject", "further question", "turn to"。
+I. Listing Items 列舉:
+    For this function, there are two types. 這類功能有兩種類型。
+    One is introducing the first/second/last item with phrases, such as "first", "second", "last", "begin by", "next", "lastly" and so on. 一種是用來列出第一/第二/最後一個項目，如"first", "second", "last", "begin by", "next", "lastly"。
+    Another is briefly mentioning some projects with phrases, such as "etc", "and so on" and so on. 另一種是表示更多例子，與中文的「等等」相似，如"etc", "and so on"。
+J. Paraphrasing or Clarifying 重新詮釋或澄清: 
+    For this function, there are phrases, such as "that is to say", "in other words", "namely", "more precisely", "or rather" and so on. 此類例如"that is to say", "in other words", "namely", "more precisely", "or rather"。
+K. Citing Others 引用他人觀點:
+    For this function, there are two types. 這類功能有兩種類型。
+    One indicates that quote others article or speech, which may use quotation marks or indents. 一種表示引用他人的文章或演講，可以使用引號或縮進。
+    Another is interpreting by someone but not the author of this article, which may use phrases, such as "find", "suggest", "write", "argue", "maintain", "concludes", "according to" and so on. 另一種是由他人而非本文作者解釋，如"find", "suggest", "write", "argue", "maintain", "concludes", "according to"。
+L. Concluding and Summarizing 總結和摘要:
+    For this function, there are phrases, such as "summary", "conclusion", "summarize", "conclude" and so on. 此類例如"summary", "conclusion", "summarize", "conclude"。
