@@ -2,9 +2,9 @@ import openai
 import streamlit as st
 from doubleSpace import diff_tokens, get_a_line, replaceBlank
 
-functions_file_path = "./rhetorical_functions.txt"
+functions_file_path = "./rhetorical_functions_few.txt"
 with open(functions_file_path, 'r') as functions_file:
-    rhetorical_functions = functions_file.read()
+    rhetorical_functions_few = functions_file.read()
 
 CoT_Example_path = "./CoT_Example.txt"
 with open(CoT_Example_path, 'r') as CoT_Example_file:
@@ -15,7 +15,7 @@ def process_article(article_content):
     CONTENT_linguist = "I want you to act as if you are a linguist who are familiar with functional language which is meta discourse and not the content itself. Phrases in functional language typically appear at the beginning of a sentence, are high in frequency with common and general words."
     # 說明規則
     CONTENT_functions = f"""Here are 12 types of rhetorical functions and their examples.
-{rhetorical_functions}
+{rhetorical_functions_few}
 
 Do the following steps:
 """
@@ -27,15 +27,14 @@ Notice:
     3. A sentence may have two or more phrases using rhetorical functions.
 """
     # 表格格式
-    CONTENT_table ="""
-Make a table, which containing the sentence number, sentence, phrase, and rhetorical function.
+    CONTENT_table ="""Make a table, which containing the sentence number, sentence, phrase, and rhetorical function.
 Notice:
     1. The table should have 4 columns: Sentence Number, Sentence, Phrase, Rhetorical Function. 
     2. The rhetorical Function content should be written as "<Alphabet>. <Big Title of Function>".
     3. Put all sentences in the table. If a sentence has no phrase realizing rhetorical functions, leave the phrase and rhetorical function columns blank.
 """
     # 輸出表格
-    CONTENT_output ="""Must output only the table. DO NOT output any other message."""
+    CONTENT_output ="""Must output only the table. Do not output any other message."""
     # 一步步做
     CONTENT_step_by_step ="""Let's think and do it step by step."""
     # 思考鏈範例
@@ -44,56 +43,55 @@ Notice:
 
 Output:
 Find the phrases sentence by sentence.
-Do not output the following thought.
 
 Sentence 1: I certainly agree that travelling in a group with a tour guide is the best option.\n
-    Phrase, [I certainly agree that], is the rhetorical function E. Expressing Personal Opinions.\n
+    The phrase, [[I certainly agree that]], expresses the author's ideas about traveling directly and clearly. It is the rhetorical function E. Expressing Personal Opinions.\n
+    The phrase, [[certainly]], shows a high probability of agreeing that traveling is the best option. It is the rhetorical function F. Expressing Possibility/Certainty POSS.\n
 Sentence 2: Travelling outside of the place where you live is one of the most exiting and enjoyable things to do in most peoples lives.\n
-    No phrase realizing rhetorical function in this sentence.\n
+    There is no phrase realizing rhetorical function in this sentence.\n
 Sentence 3: People tend to take vacations to get away from the rigours of daily life.\n
-    Phrase, [tend to], is the rhetorical function F. Expressing Possibility/Certainty POSS.\n
+    The phrase, [[tend to]], shows a certain degree of probability about people's preferences. It is the rhetorical function F. Expressing Possibility/Certainty POSS.\n
 Sentence 4: Most people would certainly like to go alone or with an individual family if the choice existed.\n
-    Phrase, [certainly like to], is the rhetorical function F. Expressing Possibility/Certainty POSS.\n
+    The phrase, [[certainly like to]], shows a certain degree of probability about people's preferences. It is the rhetorical function F. Expressing Possibility/Certainty POSS.\n
 Sentence 5: However most places that people consider are far away and exotic in nature, not to ignore the fact that they could be dangerous too.\n
-    Phrase, [However], is the rhetorical function G. Introducing a Concession.\n
+    The phrase, [[However]], expresses a cautious concession between being alone and safety. It is the rhetorical function G. Introducing a Concession.\n
 Sentence 6: Take for example the Bali in Indonesia.\n
-    Phrase, [Take for example], is the rhetorical function C. Introducing an Examples.\n
+    The phrase, [[Take for example]], gives an example of previous viewpoints. It is the rhetorical function C. Introducing an Example.\n
 Sentence 7: The recent terrorist strike in Bali killed a lot of people, mostly vacationeers.\n
-    No phrase realizing rhetorical function in this sentence.\n
+    There is no phrase realizing rhetorical function in this sentence.\n
 Sentence 8: Going in a group offers a lot of benifits to a traveller.\n
-    No phrase realizing rhetorical function in this sentence.\n
+    There is no phrase realizing rhetorical function in this sentence.\n
 Sentence 9: Most airlines and hotels offer group booking discounts as well as preferential service.\n
-    No phrase realizing rhetorical function in this sentence.\n
+    There is no phrase realizing rhetorical function in this sentence.\n
 Sentence 10: Travelling in a group also makes you feel secure rather than travelling alone.\n
-    Phrase, [also], is the rhetorical function A. Adding Information.\n
+    The phrase, [[also]], adds more information about the benefits of group travel. It is the rhetorical function A. Adding Information.\n
 Sentence 11: Travelling in groups would be specially advantageous to people with kids as I believe kids are better behaved and more entertained when they are in a group.\n
-    Phrase, [I believe], is the rhetorical function E. Expressing Personal Opinions.\n
+    The phrase, [[I believe]], expresses the author's ideas about kids group travel directly and clearly. It is the rhetorical function E. Expressing Personal Opinions.\n
 Sentence 12: Going in a group with a tour guide would also help people with disabilities.\n
-    Phrase, [also], is the rhetorical function A. Adding Information.\n
+    The phrase, [[also]], adds more information about the benefits of group travel. It is the rhetorical function A. Adding Information.\n
 Sentence 13: Also, why do something when you can have someone do it for you?\n
-    Phrase, [Also,], is the rhetorical function A. Adding Information.\n
+    The phrase, [[Also,]], adds more information about the benefits of group travel. It is the rhetorical function A. Adding Information.\n
 Sentence 14: This is the type of question most people would ask when going out on a trip.\n
-    No phrase realizing rhetorical function in this sentence.\n
+    There is no phrase realizing rhetorical function in this sentence.\n
 Sentence 15: Instead of spending time and researching about a particular destination, it would be better to employ a local expert ( tour guide ) to guide you to the right places and explain the history and culture of that particular place.\n
-    Phrase, [Instead of], is the rhetorical function G. Introducing a Concession.\n
-    Phrase, [it would be better], is the rhetorical function E. Expressing Personal Opinions.\n
+    The phrase, [[Instead of]], expresses a cautious concession between researching by self and being guided by others. It is the rhetorical function G. Introducing a Concession.\n
+    The phrase, [[it would be better]], indirectly expresses the author's thought that group travel is better than solo travel. It is the rhetorical function E. Expressing Personal Opinions.\n
 Sentence 16: A tour guide would also be helpful incase there is an emergency and you might need to contact the local authorities or need any kind of help.\n
-    Phrase, [also], is the rhetorical function A. Adding Information.\n
+    The phrase, [[also]], adds more information about the benefits of group travel. It is the rhetorical function A. Adding Information.\n
 Sentence 17: Also with their experience most tour guides are able to guide us to the right spots and destinations, making the most of our vacation.\n
-    Phrase, [Also], is the rhetorical function A. Adding Information.\n
+    The phrase, [[Also]], adds more information about the benefits of group travel. It is the rhetorical function A. Adding Information.\n
 
 Convert all sentences into a table with 4 columns: Sentence Number, Sentence, Phrase, Rhetorical Function.
-Output the following table.
 
 | Sentence Number | Sentence | Phrase | Rhetorical Function |
 | -------------- | -------- | ------ | ------------------- |
 | 1 | I certainly agree that travelling in a group with a tour guide is the best option. | I certainly agree that | E. Expressing Personal Opinions |
 | 1 | I certainly agree that travelling in a group with a tour guide is the best option. | certainly | F. Expressing Possibility/Certainty POSS |
 | 2 | Travelling outside of the place where you live is one of the most exiting and enjoyable things to do in most peoples lives. |  |  |
-| 3 | People tend to take vacations to get away from the rigours of daily life. | tend to | F. Expressing Possibility/Certainty POSS|
-| 4 | Most people would certainly like to go alone or with an individual family if the choice existed. | certainly like to | F. Expressing Possibility/Certainty POSS|
-| 5 | However most places that people consider are far away and exotic in nature, not to ignore the fact that they could be dangerous too. | However | G. Introducing a Concession
-| 6 | Take for example the Bali in Indonesia. | Take for example | C. Introducing an Examples
+| 3 | People tend to take vacations to get away from the rigours of daily life. | tend to | F. Expressing Possibility/Certainty POSS |
+| 4 | Most people would certainly like to go alone or with an individual family if the choice existed. | certainly like to | F. Expressing Possibility/Certainty POSS |
+| 5 | However most places that people consider are far away and exotic in nature, not to ignore the fact that they could be dangerous too. | However | G. Introducing a Concession |
+| 6 | Take for example the Bali in Indonesia. | Take for example | C. Introducing an Examples |
 | 7 | The recent terrorist strike in Bali killed a lot of people, mostly vacationeers. |  |  |
 | 8 | Going in a group offers a lot of benifits to a traveller. |  |  |
 | 9 | Most airlines and hotels offer group booking discounts as well as preferential service. |  |  |
@@ -122,7 +120,7 @@ Output:
         {'role': 'user', 'content': CONTENT_functions},
         {'role': 'user', 'content': CONTENT_identify},
         {'role': 'user', 'content': CONTENT_table},
-        {'role': 'user', 'content': CONTENT_output},
+        # {'role': 'user', 'content': CONTENT_output},
         {'role': 'user', 'content': CONTENT_step_by_step},
         {'role': 'user', 'content': CONTENT_CoT_Example},
         {'role': 'user', 'content': CONTENT_test_article}
@@ -130,8 +128,7 @@ Output:
 
     st.subheader('**參考轉折詞分類**')
     
-    with st.expander("Rhetorical Function", expanded=True):
-        text = st.write(rhetorical_functions)
+    write_rhetorical_functions()
     
     submit_prompt = st.button('送出')
     
@@ -170,7 +167,15 @@ Output:
         # All content of reponse
         # with st.expander('Whole Response'):
         # st.write(response_1)
-   	
+
+def write_rhetorical_functions():
+    functions_file_path = "./rhetorical_functions.txt"
+
+    with st.expander("Rhetorical Function", expanded=True):
+        functions_file = open(functions_file_path, 'r')
+        for sentence in functions_file:
+            st.write(sentence)
+
 def getfixedsentence(article_content, response_table):
     # 預設立場職業 - Assistant
     CONTENT_Assistant = """You are a helpful, pattern-following assistant."""

@@ -1,0 +1,165 @@
+A. Adding Information:
+    For this function, there are two types. 
+    One is adding information with phrases, such as "in addition", "other", "another", "in addition to ", "besides" and so on.
+    For example:
+        After the election, we asked whether the parties should change their leaders, their policies, or both. [[In addition,]] we asked about voting preferences.
+        One type of skin cancer is caused when skin that is not used to the sun is exposed to short bursts of strong sunlight. [[Other types]] of skin cancer are associated with continued exposure to the sun over a long period.
+        It is important to get your performers to keep the microphone as still as possible. [[Another point]] for them to remember is not to speak directly at the microphone but to aim instead just over the top of it.
+    Another is amplifying with phrases, such as "moreover", "furthermore", "besides" and so on.
+    For example:
+        There was more than enough to do in repairing the faults of the existing system and correcting the injustices of the past. [[Moreover,]] the reforms had to be achieved with resources severely diminished by the efforts of war.
+        Science cannot provide that kind of certainty. [[Furthermore,]] it is often overlooked that we can only apply the scientific method to a tiny fraction of the impressions upon which we act.
+
+B. Describing Similarities/Differences:
+    For this function, there are two types. 
+    One is comparing similarities with phrases, such as "similarity", "similar", "resemble", "correspond", "likewise", "similarly" and so on.
+    For example:
+        There is [[a remarkable similarity of]] techniques of clothes and of weapons.
+        The pattern of mortality is [[broadly similar for]] men and women.
+        It is possible to suggest that the two poets [[resemble one another]].
+        Media theories must make the absence of state control their cornerstone. [[Likewise,]] proposals for the reform of the media must pay due attention to it.
+        The "Celtic belt" was heavily forested in those days [[, as was]] Italy in pre-Roman times.
+    Another is controlling differences with phrases, such as "contrast", "difference", "different", "differ", "on the other hand", "in contrast to", "while", "whereas" and so on.
+    For example:
+        Table 1 shows [[significant differences in]] marital status.
+        It is, therefore, with two [[contrasting]] views of the discipline that I wish to begin.
+        The Arctic and Southern oceans [[differ in]] many respects.
+        For his final years in office, Warwick was known to be out of favor with the king. Gloucester[[, by contrast,]] kept the king's full confidence.
+        A public company[[, unlike a private company,]] must be limited by shares.
+        Biographies will be included in the present chapter[[, while]] catalogs will be treated in the next.
+
+C. Introducing an Example:
+    For this function, there are phrases, such as "for example", "such as", "notably" and so on.
+    For example:
+        Critics say that the division of responsibilities is unclear. Social security, [[for example,]] is the responsibility of the central government, but education is handled by local authorities.
+        [[An example of this is]] the scene where he confronts Marco, asking for his word not to kill Eddie.
+        Such a situation is due to the fact that people prefer easier entertainment [[, such as]] watching television or playing computer games.
+        The interplay of these factors [[is illustrated by]] the following case studies.
+        Garlic sausages are made in many countries [[, notably]] France, Germany and Poland.
+
+D. Expressing Cause/Effect:
+    For this function, there are three types. 
+    First is labeling the reason with phrases, such as "because", "since", "because of ", "due to ", "factor" and so on.
+    For example:
+        [[Because]] they were losing their sense of identity, the Liberals were split three ways by the 1931 election.
+        For the poor, the family is not a mechanism to control resources but an institution to turn to [[because of]] the scarcity of resources.
+        Eating and feeding problems are a very [[common cause of]] concern for parents.
+    Second is marking the result with phrases, such as "therefore", "thus", "as a result of", "so that" and so on.
+    For example:
+        It is absolutely essential [[, therefore,]] that vegans take vitamin B12 supplements.
+        Acquired dyslexia involves a loss of reading ability [[as a result of]] brain injury.
+        None had spent less than nine years in Jamaica before leaving [[, so that]] all had learned their first language there.
+        The [[consequence is that]] far fewer girls than boys are excluded from school.
+    Last is using verbs to link cause and effect with phrases, such as "cause", "contributes to ", "arise from ", "derive" and so on.
+    For example:
+        Mrs Thatcher's gamble [[caused]] a huge crisis and the fall of the government.
+        Although many deaths [[arise from]] natural causes, each year sees a large number of deaths caused by accidents.
+
+E. Expressing Personal Opinions:
+    For this function, there are two types. 
+    One is expressing the author's ideas directly and clearly with phrases such as "in my opinion", "I think", "I believe that" and so on.
+    For example:
+        [[In my opinion,]] America continues to set an example for women around the world.
+        [[I think that]] a sense of humor is a very important quality.
+    Another is expressing the author's meaning indirectly with phrases such as "It is reasonable to", "It is important that ", "Interestingly,", "Significantly,", ", surprisingly," and so on.
+    For example:
+        [[It is reasonable to]] assume that such changes have significant social and economic effects.
+        [[Interestingly,]] virtually all published studies from around the world have reported similar findings.
+
+F. Expressing Possibility/Certainty POSS:
+    For this function, there are phrases such as "may", "might", "should", "must", "seem", "prove", "probably", "obviously", "assumption", "belief" and so on.
+    For example:
+        Advances in medical knowledge [[might]] lead to the conclusion that some forms of sport are simply too dangerous.
+        The conclusion is that charity cannot in itself deal with problems and that any regeneration [[must]] spring from private investment.
+        The rapid spread of UNIX-based systems [[seems to]] facilitate competition.
+        Such results [[tend to]] support the associative view.
+        The truth of the matter [[probably]] lies somewhere in between.
+        It was found that [[approximately]] 30 percent of the map area was made up of polygons.
+        In such cases, [[it is likely that]] the candidate has had inadequate or misguided supervision.
+        These interpretations, however, are based on the [[assumption that]] there were no effects of subjective risk in the study.
+
+G. Introducing a Concession:
+    For this function, there are phrases, such as "however", "nevertheless", "nonetheless", "yet", "although", "though", "albeit", "despite", "in spite of", "notwithstanding" and so on.
+    For example:
+        In Britain [[, however,]] they have a limited impact on voting behavior.
+        Wordsworth chooses a neutral style [[, yet]] the total effect is somehow magnificent.
+        Lacan has been very influential [[, although]] he is an almost impenetrably obscure writer.
+        [[Though]] television was pro-government and pro-conservative, it was much less so than other elements of the mass media.
+        It is intriguing that some patients with amnesia can learn certain new skills as quickly as normal subjects [[, even though]] they are often unable to remember the circumstances in which they learned them.
+        A new view of war [[, albeit]] one which had close links with past ideas, was gradually emerging.
+        The case was heard in conditions of strict secrecy, and the outcome was not published [[, despite]] considerable public interest in the case.
+        Spending on education remained high [[in spite of]] the earlier crisis.
+
+H. Introducing Topics:
+    For this function, there are four types. 
+    First is introducing main topics with phrases, such as "consider", "discuss", "subject", "issue" and so on.
+    For example:
+        [[This chapter will concentrate on]] questions of methodology.
+        [[This article examines]] some of the issues arising in connection with the drafting and interpretation of European Community legal texts.
+        This [[subject]] is discussed at length in Chapter 5.
+        Here the term' acquired disorder of language' is used; and this is the [[topic]] of this chapter.
+    Second is introducing subtopics with phrases, such as "as for ", "with regard to", "incidentally" and so on.
+    For example:
+        The emissions of nitrogen oxides from road vehicles may be higher in 2020 than at present. [[As for]] carbon dioxide emissions, they could more than double by 2020.
+        The younger age groups contain higher proportions of people who are found guilty of criminal offenses. [[With regard to]] theft, for example, in 1970, 38% of persons convicted of theft were juveniles.
+    Third is changing the subject with phrases, such as "another", "further", "turn to" and so on.
+    For example:
+        Exercise is [[another subject]] which should also be considered.
+        [[A further question]] which arises is whether the Morgan standard is appropriate for children and young girls.
+    Last is switching topics in related research.
+    For example:
+        [[In a QA approach closer to our work]], Ittycheriah et al. [2000] used LCA to expand the initial query. 
+        [[In contrast to the previous research in question answering]], we present a system.
+
+I. Listing Items:
+    For this function, there are two types.
+    One is introducing the first/second/last item with phrases, such as "first", "second", "last", "begin by", "next", "lastly" and so on.
+    For example:
+        [[The first]] argument simply asserts that social factors outweigh individual ones.
+        The behaviorists insist that we can observe two things: first, what an animal does, and [[second,]] its previous environmental history.
+        [[Thirdly,]] the tests measure only a small part of the range of mental abilities.
+        [[Lastly]], general practitioners must feel confident enough to ask a colleague for advice.
+    Another is briefly mentioning some projects with phrases, such as "etc.", "and so on" and so on.
+    For example:
+        Some countries lack a suitable economic infrastructure – roads, railways, docks[[, etc.]]
+        Some countries lack a suitable economic infrastructure [[such as]] roads, railways, [[and]] docks.
+        In practice, many species are recognized by having some peculiarity of shape, behavior, plumage, color [[and so on]].
+
+J. Paraphrasing or Clarifying: 
+    For this function, there are phrases, such as "that is to say", "in other words", "namely", "more precisely", "or rather" and so on.
+    For example:
+        The police now have up to ninety-six hours [[, i.e.]] four days and nights, to detain people without charge.
+        Descartes was obsessed with epistemological questions [[, that is,]] questions about what we can know and how we can know it.
+        The actions that are defined as criminal vary with different social settings. [[In other words,]] crime is a relative concept.
+        This was particularly so in the areas with larger farms [[, namely]] Derbyshire,  Leicestershire, South Wales and Speyside.
+        The product is designed in American[[, or more specifically,]] Californian.
+        There are, of course, history books [[, or rather]] sections and chapters in books, which do focus on women.
+
+K. Citing Others:
+    For this function, there are two types. 
+    One indicates that quotes other articles or speech which may use quotation marks or indents.
+    For example:
+        Although over 80% of services claimed to offer aftercare, only half of these were found to offer help 'systematically or always' ([[Hellinckx and Munter 1990]]).
+        In the Communist Manifesto, [[Marx and Engels stated that]] 'the history of all hitherto existing society is the history of class struggle'.
+    Another is interpreting by someone but not the author of this article, which may use phrases such as "find", "suggest", "write", "argue", "maintain", "concludes", "according to" and so on.
+    For example:
+        Thus, [[the author concludes that]] being male or female gives one a distinctive viewpoint.
+        The authors [[found]] that 40% of social scientists rarely refer to theses.
+        [[His conclusion is that]] class inequalities in education have changed very little since the First World War.
+        "Le Corbusier's opinion" that a house is a machine to live in is no longer disputed.
+        The purpose of psychoanalytic therapy[[, according to Freud,]] was to remove the power of the symptom by making it intelligible.
+        Our unity with our fellow men[[, in Gandhi's view,]] presents us with an inescapable moral obligation towards them.
+
+L. Concluding and Summarizing:
+    For this function, there are two types.
+    One is summarizing with phrases, such as "in summary", "to summarize", "summing up" and so on.
+    For example:
+        [[In summary,]] the success of the revolt was due to a culmination of factors.
+        [[To summarize,]] there is a wide range of things that ordinary consumers can do to reduce the demand for energy.
+        [[In brief,]] what this means is that every individual comprising the population of interest should have an equal chance of being selected for the sample.
+    Another is drawing conclusions with phrases, such as "in conclusion", "to conclude", "conclusion", "conclude" and so on.
+    For example:
+        [[In conclusion,]] this study shows that the World Wide Web is a useful resource for translation.
+        Our second tentative [[conclusion is that]] social services may have reduced people's subjective sense of inequality.
+        [[It is reasonable to conclude that]] professional football is a business.
+        After a preliminary examination of the data, [[it can be concluded that]] the distribution is not normal.
