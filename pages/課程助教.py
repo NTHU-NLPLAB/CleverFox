@@ -71,7 +71,7 @@ def generate_response(prompt):
 ##Showing setting button
 st.title("🦊 嗨！我是你的AI教學助教💡")
 
-input_key = st.text_input("輸入您的OpenAI API key", '')
+input_key = st.secrets["api_key"]
 openai.api_key = input_key
 st.divider()
 
@@ -140,9 +140,6 @@ if st.button('產生建議問題'):
         f"Randomly generate three questions related to {question_related} within 10 words"
     )
     st.write(f"🦊 你可以試著問問：\n{following_question}")
-
-if not input_key:
-    st.error('請在上方輸入您的OpenAI API key')
 
 user_input = st.session_state.something
 
