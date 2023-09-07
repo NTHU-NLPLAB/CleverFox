@@ -87,7 +87,8 @@ def grammar(text):
                 print(lines[1])
                 line1 = replaceBlank(lines[0])
                 line2 = replaceBlank(lines[1])
-                st.write(line1, '\n', line2)
+                st.write(line1)
+                st.write(line2)
 
         getExplain(res)
         # Original fixed sentence
