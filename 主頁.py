@@ -26,10 +26,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-
-original_content = ""
-
-
 def add_logo():
     st.markdown(
         """
@@ -46,13 +42,8 @@ def add_logo():
         unsafe_allow_html=True,
     )
 
-
-add_logo()
-
-
 def run():
     st.session_state.run = True
-
 
 def refresh_mainpage():
     # 清空 session_state.show_topic 前先檢查是否存在
@@ -64,14 +55,17 @@ def refresh_mainpage():
     # 使用 st.experimental_rerun() 重新運行整個應用程序
     st.experimental_rerun()
 
-
+add_logo()
 st.title("🦊 I'd Rather Be a CleverFox")
-input_key = st.text_input("輸入您的OpenAI API key", '')
+
+# Import OpenAI API key
+input_key = st.secrets["api_key"]
 openai.api_key = input_key
 st.divider()
 
 col1, col2 = st.columns([4, 1])  # cut into two sections
-# left page：article
+original_content = ""
+# Left page：article
 with col1:
     subcol1, subcol2 = st.columns([2, 1])
     with subcol1:
@@ -106,18 +100,14 @@ with col2:
     revise_topic = st.radio("", ['文法改錯', '文字等級提升', '轉折詞分析'])
 
 # output edited article
-
 if not text:
     st.error('未有文章')
 else:
-    if not input_key:
-        st.error('請在上方輸入您的OpenAI API key')
-    else:
-        if revise_topic == '文法改錯':
-            grammaly.grammar(text)
+    if revise_topic == '文法改錯':
+        grammaly.grammar(text)
 
-        if revise_topic == '文字等級提升':
-            wordchoice.choice(text)
+    if revise_topic == '文字等級提升':
+        wordchoice.choice(text)
 
-        if revise_topic == '轉折詞分析':
-            RhetoricalFunction.process_article(text)
+    if revise_topic == '轉折詞分析':
+        RhetoricalFunction.process_article(text)
