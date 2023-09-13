@@ -102,13 +102,13 @@ def grammar(text):
 # explain
 def getExplain(fixed_sentence):
     fixed_sentence = st.text_area('Fixed Sentence', f'{fixed_sentence}')
-    QUES1 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : Last summer, I {+went+} [-go-] on a trip to {+a+} [-an-] beautiful beach. The weather {+was+} sunny and warm."
+    QUES1 = "Compare EACH modified part to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : Last summer, I {+went+} [-go-] on a trip to {+a+} [-an-] beautiful beach. The weather {+was+} sunny and warm."
     ANS1 = "| 原字詞 | 替代字詞 | 詞組(span of words) | 解釋 |\n|---|---|---|---|\n|  go | went | I went on a trip | 將\"go\"改為\"went\"是為了修正動詞的時態錯誤。 |\n| an | a | a beautiful beach | 由於 \"beautiful beach\" 以子音音素開頭，所以需要使用 \"a\" 這個冠詞，而不是 \"an\"。 | N/A | was | The weather was | 原句中缺少了 \"was\" 這個助動詞，這導致了句子的主詞 \"the weather\" 和描述詞片語 \"sunny and warm\" 之間的動詞缺失。|"
-    QUES2 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : I built {+sandcastles+} [-sendcastles-] with my family {+and+} [-or-] collected seashells."
+    QUES2 = "Compare EACH modified part to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : I built {+sandcastles+} [-sendcastles-] with my family {+and+} [-or-] collected seashells."
     ANS2 = "| 原字詞 | 替代字詞 | 詞組(span of words) | 解釋 |\n|---|---|---|---|\n| sendcastles | sandcastles | built sandcastles | 原本的 \"sendcastles\" 拼寫錯誤，正確的是 \"sandcastles\"。 |\n| and | or | and collected seashells | \原文使用的 \"or\" 暗示只能選擇其中一個活動，但根據上下文，你的意圖是同時進行兩個活動，所以需要使用 \"and\" 來連接兩個動詞。 |"
-    QUES3 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : I am against the other product, {+the+} invisible cloaks."
+    QUES3 = "Compare EACH modified part to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : I am against the other product, {+the+} invisible cloaks."
     ANS3 = "| 原字詞 | 替代字詞 | 詞組(span of words) | 解釋 |\n|---|---|---|---|\n| N/A | the | the invisible cloaks | \"invisible cloaks\" 是特指的名詞片語，需要使用定冠詞 \"the\" 來指明你所提到的具體產品是哪一種。|"
-    QUES4 = "Compare the modified parts to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : Water shortage has been a serious problem for many years and {+has caused+} [-causes-] various crises."
+    QUES4 = "Compare EACH modified part to the original text of the following setnece, precisly explain why the replacement is better than original word in a markdown table : Water shortage has been a serious problem for many years and {+has caused+} [-causes-] various crises."
     ANS4 = "| 原字詞 | 替代字詞 | 詞組(span of words) | 解釋 |\n|---|---|---|---|\n| causes | has caused | has caused various crises | 為了保持時態一致性，我們應該使用過去完成式 \"has caused\" 來表達這個問題已經對多年來造成的各種危機產生了影響。|"
 
     response = openai.ChatCompletion.create(
@@ -124,7 +124,7 @@ def getExplain(fixed_sentence):
             {"role": "assistant", "content": ANS4},
             {
                 "role": "user",
-                "content": f"Compare the modified parts to the original text of the following setnece, precisly explain the replacement in a markdown table :{fixed_sentence}",
+                "content": f"Compare EACH modified part to the original text of the following setnece, precisly explain the replacement in a markdown table :{fixed_sentence}",
             },
         ],
         temperature=0,
